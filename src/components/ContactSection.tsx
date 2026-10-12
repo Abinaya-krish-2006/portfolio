@@ -6,13 +6,13 @@ import { EMAILJS_CONFIG } from "@/config/emailjs";
 import { SectionBadge } from "./ui/SectionBadge";
 import emailjs from "@emailjs/browser";
 import confetti from "canvas-confetti";
-import { 
-  HiMail, 
-  HiPhone, 
-  HiLocationMarker, 
-  HiPaperAirplane, 
-  HiCheckCircle, 
-  HiExclamationCircle 
+import {
+  HiMail,
+  HiPhone,
+  HiLocationMarker,
+  HiPaperAirplane,
+  HiCheckCircle,
+  HiExclamationCircle
 } from "react-icons/hi";
 import { FiGithub, FiLinkedin, FiSend } from "react-icons/fi";
 import { motion } from "framer-motion";
@@ -86,7 +86,7 @@ export function ContactSection() {
         setStatus("error");
         setStatusMessage(
           "Could not send email directly via EmailJS. Please try contacting directly at " +
-            PORTFOLIO_DATA.personal.email
+          PORTFOLIO_DATA.personal.email
         );
       }
     } else {
@@ -282,11 +282,10 @@ export function ContactSection() {
                 {/* Status Message */}
                 {statusMessage && (
                   <div
-                    className={`p-4 rounded-xl text-xs sm:text-sm font-medium flex items-start gap-2.5 ${
-                      status === "success"
-                        ? "bg-emerald-50 text-emerald-800 border border-emerald-200"
-                        : "bg-rose-50 text-rose-800 border border-rose-200"
-                    }`}
+                    className={`p-4 rounded-xl text-xs sm:text-sm font-medium flex items-start gap-2.5 ${status === "success"
+                      ? "bg-emerald-50 text-emerald-800 border border-emerald-200"
+                      : "bg-rose-50 text-rose-800 border border-rose-200"
+                      }`}
                   >
                     {status === "success" ? (
                       <HiCheckCircle className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
